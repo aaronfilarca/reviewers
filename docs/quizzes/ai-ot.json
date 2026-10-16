@@ -1,0 +1,1965 @@
+{
+  "title": "AI - OT",
+  "slug": "ai-ot",
+  "schemaVersion": 2,
+  "description": "50 items transcribed from a supplied past-assessment PDF, with independently reviewed answers and explanations. Includes 48 scored questions and 2 unscored source-review items.",
+  "catalogueBadge": "Past paper",
+  "language": "en",
+  "createdOn": "2026-10-16",
+  "timezone": "Asia/Manila",
+  "source": "AI_FINALS.pdf (user-supplied scanned past-assessment feedback)",
+  "provenance": {
+    "statement": "Transcribed from a supplied past assessment. The answer key is independently reviewed, not an official key. Ambiguous wording is explained. Questions 36 and 50 are unscored review items because no unique supported choice can be recovered.",
+    "transcription": "Original question numbers, visible stems and choices preserved; whitespace normalized. Where the source uses checkbox-style choices, the number of defensible answers determines the reviewer interaction.",
+    "answerKeyStatus": "independently_reviewed_not_official",
+    "sourcePageCount": 24,
+    "originalItemCount": 50,
+    "scoredQuestionCount": 48,
+    "reviewOnlyQuestionNumbers": [
+      36,
+      50
+    ],
+    "mediumConfidenceQuestionNumbers": [
+      4,
+      5,
+      15,
+      16,
+      31,
+      38,
+      46
+    ],
+    "sourceLimitations": [
+      "The source shows selected responses rather than an official answer key; selections were not assumed correct.",
+      "Question 36 has multiple defensible remedies in a single-choice stem, so no unique answer is graded.",
+      "Question 50 is clipped after A and part of B; omitted choices are not invented.",
+      "Some true/false and qualitative statements have imprecise wording; explanations identify the interpretation used."
+    ],
+    "privacy": "Only educational question content and explanations are published. The original PDF, submission receipt, grades, student details, source assessment URLs and page images are excluded."
+  },
+  "modules": [
+    {
+      "id": "all",
+      "number": 1,
+      "title": "AI - OT",
+      "questionCount": 50
+    }
+  ],
+  "mocks": [],
+  "sources": [
+    {
+      "id": "AI_FINALS_PDF",
+      "title": "AI_FINALS.pdf — supplied past-assessment scan",
+      "kind": "user_supplied_pdf",
+      "pageCount": 24,
+      "answerKeyStatus": "independent_review"
+    }
+  ],
+  "questions": [
+    {
+      "id": "ai-ot-q001",
+      "number": 1,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Language models",
+      "prompt": "How does a typical language model generate a response?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Predicting the next token repeatedly"
+        },
+        {
+          "id": "b",
+          "text": "Retrieves a complete response stored during training"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "Predicting the next token repeatedly",
+      "explanation": "An autoregressive language model generates a token using the preceding context, appends it to the context, and repeats the process. It does not ordinarily retrieve a complete prewritten response from its training data.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        1
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q002",
+      "number": 2,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Regression",
+      "prompt": "The label predicted by the regression algorithm is?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Strain type"
+        },
+        {
+          "id": "b",
+          "text": "Self-deformation"
+        },
+        {
+          "id": "c",
+          "text": "Discrete"
+        },
+        {
+          "id": "d",
+          "text": "Continuous"
+        }
+      ],
+      "correctChoiceIds": [
+        "d"
+      ],
+      "selectionCount": 1,
+      "answerText": "Continuous",
+      "explanation": "Regression predicts a numerical target, usually modeled as a continuous quantity. Predicting a discrete class is a classification task.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        1,
+        2
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q003",
+      "number": 3,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Overfitting and generalization",
+      "prompt": "During training, the training loss continues to decrease while the validation loss begins to increase. What does this most likely indicate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The model is underfitting because it has not learned the training data well enough"
+        },
+        {
+          "id": "b",
+          "text": "The model is overfitting the training data and generalizing poorly to unseen data"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "The model is overfitting the training data and generalizing poorly to unseen data",
+      "explanation": "The model is improving its fit to training examples while its performance on held-out examples deteriorates. This divergence is a standard sign of overfitting.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q004",
+      "number": 4,
+      "moduleId": "all",
+      "type": "true_false",
+      "topic": "Polynomial regression",
+      "prompt": "In polynomial regression, there is a square term in the formula of the model, so it is not linear.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "text": "False"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "False",
+      "explanation": "Using the statistical definition of a linear model, polynomial regression remains linear in its learned coefficients: y = b0 + b1*x + b2*x^2. The squared input can create a curved relationship with x without making the coefficients nonlinear.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        2
+      ],
+      "answerConfidence": "medium",
+      "answerBasis": "independent_review",
+      "notes": "Ambiguous original wording: the relationship is nonlinear in the original input x when the squared coefficient is nonzero, but linear in the coefficients. The practice key uses the standard linear-in-parameters definition. The PDF does not disclose an official key for this item.",
+      "verificationUrls": [
+        "https://scikit-learn.org/0.24/modules/linear_model.html#polynomial-regression-extending-linear-models-with-basis-functions"
+      ]
+    },
+    {
+      "id": "ai-ot-q005",
+      "number": 5,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Bias and variance",
+      "prompt": "If a model has a large deviation on the test set and a small variance, it means that the model is ________.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Maybe overfitting may be underfitting"
+        },
+        {
+          "id": "b",
+          "text": "Just fit"
+        },
+        {
+          "id": "c",
+          "text": "Underfitting"
+        },
+        {
+          "id": "d",
+          "text": "Overfitting"
+        }
+      ],
+      "correctChoiceIds": [
+        "c"
+      ],
+      "selectionCount": 1,
+      "answerText": "Underfitting",
+      "explanation": "Interpreting large deviation as high bias, high bias with low variance is characteristic of an overly simple model that underfits. Such a model makes systematic errors and changes relatively little across training samples.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        3
+      ],
+      "answerConfidence": "medium",
+      "answerBasis": "independent_review",
+      "notes": "The original uses the imprecise phrase 'large deviation on the test set'. The intended bias–variance interpretation supports underfitting; a large test error by itself would not establish underfitting.",
+      "verificationUrls": [
+        "https://scikit-learn.org/stable/modules/learning_curve.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q006",
+      "number": 6,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Machine learning foundations",
+      "prompt": "In order for a machine to be intelligent, it must be knowledgeable. There is a research field in artificial intelligence which mainly studies how computers automatically acquire knowledge and skills to achieve self-improvement. Which of the following is this research field?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Neural Network"
+        },
+        {
+          "id": "b",
+          "text": "Machine learning"
+        },
+        {
+          "id": "c",
+          "text": "Expert system"
+        },
+        {
+          "id": "d",
+          "text": "Natural language processing"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Machine learning",
+      "explanation": "Machine learning studies methods through which computers learn patterns or improve task performance from data and experience. Neural networks are one family of methods within that broader field.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        3,
+        4
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q007",
+      "number": 7,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Responsible AI",
+      "prompt": "Before deploying AI to decide which students receive scholarships, the school should:",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Use the model immediately because it is faster than humans"
+        },
+        {
+          "id": "b",
+          "text": "Evaluate fairness and possible harm across student groups"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Evaluate fairness and possible harm across student groups",
+      "explanation": "Scholarship allocation affects people's opportunities, so the school should assess performance, potential bias, and possible harm across relevant student groups before deployment. Speed alone does not establish that a model is suitable.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q008",
+      "number": 8,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Dimensionality reduction",
+      "prompt": "Principal Component Analysis (PCA) is primarily used for what purpose?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Dimensionality reduction by transforming data into a lower-dimensional space while preserving variance."
+        },
+        {
+          "id": "b",
+          "text": "Imputing missing values in a dataset."
+        },
+        {
+          "id": "c",
+          "text": "Selecting the most correlated features with the target variable."
+        },
+        {
+          "id": "d",
+          "text": "Identifying and removing outliers."
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "Dimensionality reduction by transforming data into a lower-dimensional space while preserving variance.",
+      "explanation": "PCA creates orthogonal directions ranked by the amount of data variance they explain. Keeping the leading components reduces the number of dimensions while retaining as much variance as possible for that number of components.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        4
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q009",
+      "number": 9,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Gradient descent",
+      "prompt": "What is the most important difference between batch gradient descent, mini-batch gradient descent, and stochastic gradient descent?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Gradient size"
+        },
+        {
+          "id": "b",
+          "text": "Number of samples used"
+        },
+        {
+          "id": "c",
+          "text": "Gradient direction"
+        },
+        {
+          "id": "d",
+          "text": "Learning rate"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Number of samples used",
+      "explanation": "The defining difference is how many training examples estimate each update: the full training set for batch gradient descent, a subset for mini-batch gradient descent, and one example for classical stochastic gradient descent.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q010",
+      "number": 10,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Transfer learning",
+      "prompt": "A student adapts a pretrained speech-recognition model to understand Filipino accents. This is:",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Training entirely from scratch"
+        },
+        {
+          "id": "b",
+          "text": "Transfer Learning"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Transfer Learning",
+      "explanation": "Adapting an existing pretrained model reuses knowledge learned from an earlier task or dataset. This is transfer learning, and updating its weights on accent-specific data would be fine-tuning.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        5
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q011",
+      "number": 11,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Transfer learning",
+      "prompt": "What is transfer learning?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Training a new model entirely from random weights for every new task"
+        },
+        {
+          "id": "b",
+          "text": "Reusing knowledge from a pretrained model as the starting point for a new task"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Reusing knowledge from a pretrained model as the starting point for a new task",
+      "explanation": "Transfer learning applies knowledge from a model trained on a source task or dataset to a related target task, often reducing the amount of new data and training required.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        6
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q012",
+      "number": 12,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Missing-data imputation",
+      "prompt": "A machine learning engineer is preparing a data frame for a supervised learning task. The ML engineer notices the target label classes are highly imbalanced and multiple feature columns contain missing values. The proportion of missing values across the entire data frame is less than 5%. What should the ML engineer do to minimize bias due to missing values?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Replace each missing value by the mean or median across non-missing values in same row."
+        },
+        {
+          "id": "b",
+          "text": "For each feature, approximate the missing values using supervised learning based on other features."
+        },
+        {
+          "id": "c",
+          "text": "Replace each missing value by the mean or median across non-missing values in the same column."
+        },
+        {
+          "id": "d",
+          "text": "Delete observations that contain missing values because these represents less than 5% of the data."
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "For each feature, approximate the missing values using supervised learning based on other features.",
+      "explanation": "Feature-wise predictive imputation can use relationships among variables, whereas a single column mean or median ignores those relationships. Dropping incomplete rows may disproportionately remove minority-class examples. The corresponding scenario in AWS's official sample questions also selects predictive imputation.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        6
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review",
+      "notes": "Best choice among the offered options, rather than a universal guarantee. In practice, assess the missingness mechanism and validate the imputation method. Fit imputation only on training data to avoid leakage.",
+      "verificationUrls": [
+        "https://d1.awsstatic.com/training-and-certification/docs-ml/AWS-Certified-Machine-Learning-Specialty_Sample-Questions.pdf",
+        "https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q013",
+      "number": 13,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Natural language processing",
+      "prompt": "It is a branch of computer science and artificial intelligence that studies theories and methods for implementing effective communication between humans and computers.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Natural Language Processing"
+        },
+        {
+          "id": "b",
+          "text": "Automatic Speech Recognition"
+        },
+        {
+          "id": "c",
+          "text": "Recommendation Systems"
+        },
+        {
+          "id": "d",
+          "text": "Computer Vision"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "Natural Language Processing",
+      "explanation": "Among these choices, natural language processing is the broad field concerned with computers processing, interpreting, and generating human language. Automatic speech recognition is a narrower task that converts speech to text.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        6,
+        7
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q014",
+      "number": 14,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Training data",
+      "prompt": "In machine learning, what input the model needs to train itself and predict the unknown?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Training algorithm"
+        },
+        {
+          "id": "b",
+          "text": "Neural Networks"
+        },
+        {
+          "id": "c",
+          "text": "Manual procedure"
+        },
+        {
+          "id": "d",
+          "text": "Historical data"
+        }
+      ],
+      "correctChoiceIds": [
+        "d"
+      ],
+      "selectionCount": 1,
+      "answerText": "Historical data",
+      "explanation": "A model learns from training examples, represented here by historical data, and uses learned patterns to predict new cases. A training algorithm specifies how to learn; it is not the example data supplied as input.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        7
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q015",
+      "number": 15,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Gradient descent",
+      "prompt": "Which of the following statements about gradient descent is not true?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Gradient descent includes stochastic gradient descent and batch gradient descent."
+        },
+        {
+          "id": "b",
+          "text": "The gradient descent algorithm is fast and reliable."
+        },
+        {
+          "id": "c",
+          "text": "Stochastic gradient descent is a common form of gradient descent."
+        },
+        {
+          "id": "d",
+          "text": "Stochastic gradient descent is one of the commonly used optimization algorithms in Deep Learning."
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "The gradient descent algorithm is fast and reliable.",
+      "explanation": "Gradient descent is not universally fast or reliable: convergence depends on the objective, feature scaling, initialization, learning rate, and stopping rule. The other choices correctly describe established gradient-descent variants and their use.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        7,
+        8
+      ],
+      "answerConfidence": "medium",
+      "answerBasis": "independent_review",
+      "notes": "The original phrase 'fast and reliable' is qualitative. B is the intended exception when read as a general guarantee; gradient descent can be efficient and reliable under suitable conditions.",
+      "verificationUrls": [
+        "https://scikit-learn.org/stable/modules/sgd.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q016",
+      "number": 16,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Bias and variance",
+      "prompt": "As the number of training examples goes to infinity, your model trained on that data will have:",
+      "choices": [
+        {
+          "id": "a",
+          "text": "None of these mentioned."
+        },
+        {
+          "id": "b",
+          "text": "Same variance"
+        },
+        {
+          "id": "c",
+          "text": "Lower variance"
+        },
+        {
+          "id": "d",
+          "text": "Higher variance"
+        }
+      ],
+      "correctChoiceIds": [
+        "c"
+      ],
+      "selectionCount": 1,
+      "answerText": "Lower variance",
+      "explanation": "Under the usual assumption of representative, independent training samples and a fixed learning procedure, more data tends to make the fitted model less sensitive to which examples were sampled, reducing estimation variance.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        8
+      ],
+      "answerConfidence": "medium",
+      "answerBasis": "independent_review",
+      "notes": "The original omits assumptions and a comparison baseline. Lower variance is the standard intended answer relative to training on fewer examples; it is not an unconditional theorem for every model and data process.",
+      "verificationUrls": [
+        "https://scikit-learn.org/stable/modules/learning_curve.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q017",
+      "number": 17,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Learning paradigms",
+      "prompt": "Which of the following machine learning algorithms is not unsupervised learning?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Gaussian Mixture Model (GMM)"
+        },
+        {
+          "id": "b",
+          "text": "eXtreme Gradient Boosting (XGboost)"
+        },
+        {
+          "id": "c",
+          "text": "Association rules (rule-based)"
+        },
+        {
+          "id": "d",
+          "text": "Clustering"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "eXtreme Gradient Boosting (XGboost)",
+      "explanation": "XGBoost is typically used for supervised classification, regression, or ranking, where training targets are available. GMM estimation, association-rule discovery, and clustering are standard unsupervised tasks.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        8,
+        9
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review",
+      "verificationUrls": [
+        "https://xgboost.readthedocs.io/en/stable/tutorials/model.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q018",
+      "number": 18,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Transformers and attention",
+      "prompt": "When ChatGPT considers earlier words in your message to understand what \"it\" refers to, it is using:",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Self-attention"
+        },
+        {
+          "id": "b",
+          "text": "Gradient descent"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "Self-attention",
+      "explanation": "Self-attention relates tokens to other tokens in their context, helping a transformer represent relationships such as a pronoun and its possible antecedent. Gradient descent instead updates model parameters during training.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        9
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review",
+      "verificationUrls": [
+        "https://arxiv.org/abs/1706.03762"
+      ]
+    },
+    {
+      "id": "ai-ot-q019",
+      "number": 19,
+      "moduleId": "all",
+      "type": "true_false",
+      "topic": "Regularization",
+      "prompt": "A regularization term can also be added to logistic regression to avoid overfitting.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "text": "False"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "True",
+      "explanation": "Logistic regression can use penalties such as L1 or L2 regularization to discourage overly complex coefficient estimates and reduce overfitting. This is a method to control overfitting, not a guarantee that it can never occur.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        9,
+        10
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q020",
+      "number": 20,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Regularization",
+      "prompt": "What is the main purpose of regularization in neural-network training?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "To reduce overfitting and improve performance on unseen data"
+        },
+        {
+          "id": "b",
+          "text": "To make the model fit the training set as perfectly as possible, regardless of validation performance"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "To reduce overfitting and improve performance on unseen data",
+      "explanation": "Regularization constrains or discourages overly complex fits, helping the model generalize beyond the training examples. Perfect training fit alone is not the objective when it harms validation performance.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        10
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q021",
+      "number": 21,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Convolutional neural networks",
+      "prompt": "A photo application reduces the size of its feature maps while retaining important visual information. It is using:",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Positional encoding"
+        },
+        {
+          "id": "b",
+          "text": "Pooling"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Pooling",
+      "explanation": "Pooling summarizes local regions of a feature map, for example by taking a maximum or average, reducing its spatial dimensions. Positional encoding supplies information about positions rather than performing this downsampling.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        10
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review",
+      "verificationUrls": [
+        "https://keras.io/api/layers/pooling_layers/max_pooling2d/"
+      ]
+    },
+    {
+      "id": "ai-ot-q022",
+      "number": 22,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Natural language processing",
+      "prompt": "It is an NLP process in which an algorithm automatically generates grammatically sound, meaningful text content and can simulate the human writing process as well as generate various types of text, such as news reports, emails, articles, social media posts, poems, and novel chapters.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Information extraction"
+        },
+        {
+          "id": "b",
+          "text": "Smart writing"
+        },
+        {
+          "id": "c",
+          "text": "Text generation"
+        },
+        {
+          "id": "d",
+          "text": "Text classification"
+        },
+        {
+          "id": "e",
+          "text": "Text summarization"
+        }
+      ],
+      "correctChoiceIds": [
+        "c"
+      ],
+      "selectionCount": 1,
+      "answerText": "Text generation",
+      "explanation": "The general NLP task of producing new natural-language text is text generation. Classification assigns labels, extraction identifies information, and summarization produces a condensed representation of source content.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        10,
+        11
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q023",
+      "number": 23,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Machine learning foundations",
+      "prompt": "It is the study of how computers simulate or replicate human learning processes to acquire new knowledge or skills and restructure existing knowledge for continuous performance improvement.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Artificial Intelligence"
+        },
+        {
+          "id": "b",
+          "text": "Agents"
+        },
+        {
+          "id": "c",
+          "text": "Deep Learning"
+        },
+        {
+          "id": "d",
+          "text": "Machine Learning"
+        }
+      ],
+      "correctChoiceIds": [
+        "d"
+      ],
+      "selectionCount": 1,
+      "answerText": "Machine Learning",
+      "explanation": "Machine learning focuses on systems that improve task performance through data or experience. Artificial intelligence is the broader field, while deep learning is a subset using multilayer neural networks.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        11
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q024",
+      "number": 24,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Training and inference",
+      "prompt": "When you interact with ChatGPT, Gemini, or another application powered by a large language model, what process does the model primarily perform to generate a response?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Training"
+        },
+        {
+          "id": "b",
+          "text": "Inference"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Inference",
+      "explanation": "Generating a response with an already trained model is inference. Training is the separate process of adjusting model parameters using training data and an optimization objective.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        12
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q025",
+      "number": 25,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Supervised learning",
+      "prompt": "Which of the following statements about supervised learning is correct?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Supervised learning is a rule-based algorithm"
+        },
+        {
+          "id": "b",
+          "text": "Decision tree is a supervised learning"
+        },
+        {
+          "id": "c",
+          "text": "Supervised learning cannot use cross-validation for training"
+        },
+        {
+          "id": "d",
+          "text": "Supervised learning can be trained without labels"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Decision tree is a supervised learning",
+      "explanation": "Standard decision-tree classifiers and regressors learn from labeled examples. Supervised learning is a broad learning paradigm, can use cross-validation for model selection and evaluation, and requires target labels for its supervised training objective.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        12
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q026",
+      "number": 26,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Parameters and hyperparameters",
+      "prompt": "What is the difference between a parameter and a hyperparameter?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A parameter is chosen before training, while a hyperparameter is learned by backpropagation"
+        },
+        {
+          "id": "b",
+          "text": "A parameter is learned during training, while a hyperparameter is chosen to control the model or training process"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "A parameter is learned during training, while a hyperparameter is chosen to control the model or training process",
+      "explanation": "Parameters, such as learned weights and biases, are fitted from training data. Hyperparameters, such as learning rate, batch size, or model depth, configure the model or training process and may be chosen through a separate tuning procedure.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        12,
+        13
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q027",
+      "number": 27,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Data cleaning",
+      "prompt": "Which data cleaning technique involves identifying and merging records that refer to the same entity but are represented differently?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Data transformation"
+        },
+        {
+          "id": "b",
+          "text": "Outlier detection"
+        },
+        {
+          "id": "c",
+          "text": "Deduplication"
+        },
+        {
+          "id": "d",
+          "text": "Standardization"
+        }
+      ],
+      "correctChoiceIds": [
+        "c"
+      ],
+      "selectionCount": 1,
+      "answerText": "Deduplication",
+      "explanation": "Deduplication identifies repeated records, including differently formatted records of the same entity, and merges or removes the redundant copies.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        13
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q028",
+      "number": 28,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Convolutional neural networks",
+      "prompt": "What do deeper convolutional layers generally learn compared with earlier layers?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Only raw pixel brightness values, while early layers identify complete objects"
+        },
+        {
+          "id": "b",
+          "text": "More complex and abstract features formed by combining simpler features from earlier layers"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "More complex and abstract features formed by combining simpler features from earlier layers",
+      "explanation": "Earlier convolutional layers often detect simple patterns such as edges; deeper layers combine them into more complex feature representations.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        13,
+        14
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q029",
+      "number": 29,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Learning paradigms",
+      "prompt": "What does not belong to supervised learning?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Decision tree"
+        },
+        {
+          "id": "b",
+          "text": "Logistic regression"
+        },
+        {
+          "id": "c",
+          "text": "Support vector machine"
+        },
+        {
+          "id": "d",
+          "text": "Principal component analysis"
+        }
+      ],
+      "correctChoiceIds": [
+        "d"
+      ],
+      "selectionCount": 1,
+      "answerText": "Principal component analysis",
+      "explanation": "Principal component analysis finds directions of variation without target labels. Standard decision-tree, logistic-regression, and support-vector-machine prediction tasks are supervised.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        14
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q030",
+      "number": 30,
+      "moduleId": "all",
+      "type": "true_false",
+      "topic": "Regression metrics",
+      "prompt": "If the direction of the error is important, the best loss function is RMSE (Root mean Squared Error)",
+      "choices": [
+        {
+          "id": "a",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "text": "False"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "False",
+      "explanation": "RMSE squares errors before averaging and taking a square root, so the result is nonnegative and does not retain whether predictions were too high or too low.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        14,
+        15
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q031",
+      "number": 31,
+      "moduleId": "all",
+      "type": "true_false",
+      "topic": "Cross-validation",
+      "prompt": "K folding cross-validation refers to dividing the test data set into K sub-data sets.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "text": "False"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "False",
+      "explanation": "In the standard workflow, k-fold cross-validation splits the training/development data into k folds, trains on k-1 folds, and validates on the remaining fold. A separate final test set stays held out.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        15
+      ],
+      "answerConfidence": "medium",
+      "answerBasis": "independent_review",
+      "notes": "The source says 'test data set'. If it informally means the whole dataset being evaluated rather than a held-out final test set, the intended classroom answer may differ.",
+      "verificationUrls": [
+        "https://scikit-learn.org/stable/modules/cross_validation.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q032",
+      "number": 32,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Regression metrics",
+      "prompt": "Which of the following evaluation indicators belong to the regression algorithm?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Recall rate"
+        },
+        {
+          "id": "b",
+          "text": "Mean square error"
+        },
+        {
+          "id": "c",
+          "text": "Accuracy"
+        },
+        {
+          "id": "d",
+          "text": "Confusion matrix"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Mean square error",
+      "explanation": "Mean squared error measures squared differences between numeric predictions and numeric targets. The other listed measures are typically used for classification.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        15
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q033",
+      "number": 33,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Data cleaning",
+      "prompt": "An outlier is best described as:",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A duplicated record in the dataset."
+        },
+        {
+          "id": "b",
+          "text": "A data point that perfectly aligns with all other observations."
+        },
+        {
+          "id": "c",
+          "text": "data point that differs significantly from other observations."
+        },
+        {
+          "id": "d",
+          "text": "A missing value that needs to be imputed."
+        }
+      ],
+      "correctChoiceIds": [
+        "c"
+      ],
+      "selectionCount": 1,
+      "answerText": "data point that differs significantly from other observations.",
+      "explanation": "An outlier is an observation unusually far from the pattern or distribution of the other observations. It is distinct from a duplicate or a missing value.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        16
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q034",
+      "number": 34,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Probability and statistics",
+      "prompt": "Which of the following about the description of expectations and variances is incorrect?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The greater the expectation the smaller the variance"
+        },
+        {
+          "id": "b",
+          "text": "Expectation reflects the average level of random variable values"
+        },
+        {
+          "id": "c",
+          "text": "Expectation and variance are both numerical characteristics of random variables"
+        },
+        {
+          "id": "d",
+          "text": "The variance reflects the degree of deviation between the random variable and its mathematical expectation"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "The greater the expectation the smaller the variance",
+      "explanation": "A larger expected value does not imply a smaller variance. Adding a constant shifts a random variable's expectation while leaving its variance unchanged.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        16,
+        17
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q035",
+      "number": 35,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Schools of AI",
+      "prompt": "It is a major school of AI that believes believes that AI originates from cybernetics. In this school of thought, intelligence depends on perception and action; and knowledge, representation, and inference are not involved.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Logicism"
+        },
+        {
+          "id": "b",
+          "text": "Physiologism"
+        },
+        {
+          "id": "c",
+          "text": "Behaviorism"
+        },
+        {
+          "id": "d",
+          "text": "Psychologism"
+        }
+      ],
+      "correctChoiceIds": [
+        "c"
+      ],
+      "selectionCount": 1,
+      "answerText": "Behaviorism",
+      "explanation": "The behaviorist or behavior-based approach emphasizes perception, action, and interaction with an environment rather than central symbolic representations.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        17
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review",
+      "verificationUrls": [
+        "https://www.sciencedirect.com/science/article/pii/000437029190053M",
+        "https://dspace.mit.edu/entities/publication/b384f859-156d-4cba-9edc-8d766725b3ed"
+      ]
+    },
+    {
+      "id": "ai-ot-q036",
+      "number": 36,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Underfitting",
+      "prompt": "Training error causes underfitting by reducing model accuracy. How can the model be a better fit?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Adding features"
+        },
+        {
+          "id": "b",
+          "text": "Increasing data volume"
+        },
+        {
+          "id": "c",
+          "text": "Creating feature engineering"
+        },
+        {
+          "id": "d",
+          "text": "All of these mentioned"
+        }
+      ],
+      "correctChoiceIds": [],
+      "selectionCount": 0,
+      "answerText": "Adding informative features and effective feature engineering can both help.",
+      "explanation": "Feature engineering can create more informative representations and help an underfitting model. Adding informative features can also help. More data alone generally does not resolve high-bias underfitting, so 'All of these mentioned' is not a reliable general answer.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        17,
+        18
+      ],
+      "answerConfidence": "low",
+      "answerBasis": "independent_review",
+      "notes": "Ambiguous single-choice item: both A and C can address underfitting, whereas more data alone generally does not resolve high bias. No unique correct choice is assigned; this item is for review only.",
+      "verificationUrls": [
+        "https://scikit-learn.org/stable/modules/learning_curve.html"
+      ],
+      "reviewOnly": true
+    },
+    {
+      "id": "ai-ot-q037",
+      "number": 37,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Learning paradigms",
+      "prompt": "Which of the following is true about unsupervised learning?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "K-means algorithm and SVM algorithm belong to unsupervised learning"
+        },
+        {
+          "id": "b",
+          "text": "None of these mentioned"
+        },
+        {
+          "id": "c",
+          "text": "Unsupervised algorithm only processes “features” and does not process tags"
+        },
+        {
+          "id": "d",
+          "text": "Dimensionality reduction algorithm is not unsupervised learning"
+        }
+      ],
+      "correctChoiceIds": [
+        "c"
+      ],
+      "selectionCount": 1,
+      "answerText": "Unsupervised algorithm only processes “features” and does not process tags",
+      "explanation": "Unsupervised learning learns structure from features without supplied target labels or tags. Standard SVM classification is supervised, whereas methods such as PCA provide unsupervised dimensionality reduction.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        18
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q038",
+      "number": 38,
+      "moduleId": "all",
+      "type": "true_false",
+      "topic": "Statistical modeling",
+      "prompt": "The model composed of machine learning algorithms cannot represent the true data distribution function on a theoretical level. It will just approach it.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "text": "False"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "False",
+      "explanation": "The absolute theoretical claim is false: a model family can contain the true distribution, for example a Gaussian mixture when the data really follow that mixture. Estimating its parameters from finite data is a separate issue; practical fitted models usually approximate the unknown distribution.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        18,
+        19
+      ],
+      "answerConfidence": "medium",
+      "answerBasis": "independent_review",
+      "notes": "The intended classroom answer may be True if the statement is shorthand for the practical fact that fitted models approximate unknown real-world distributions. False follows the literal universal wording; no official key is present.",
+      "verificationUrls": [
+        "https://scikit-learn.org/stable/modules/mixture.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q039",
+      "number": 39,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Parameters and hyperparameters",
+      "prompt": "A student selects the learning rate before training a neural network. The learning rate is a:",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Hyperparameter"
+        },
+        {
+          "id": "b",
+          "text": "Learned parameter"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "Hyperparameter",
+      "explanation": "The learning rate controls the training procedure and is selected or tuned rather than being a network weight learned directly from the training loss.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        19
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q040",
+      "number": 40,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Decision trees",
+      "prompt": "After the data has completed the feature engineering operation, in the process of constructing the model, which of the following options is not a step in the decision tree construction process?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Pruning"
+        },
+        {
+          "id": "b",
+          "text": "Data cleaning"
+        },
+        {
+          "id": "c",
+          "text": "Decision tree generation"
+        },
+        {
+          "id": "d",
+          "text": "Feature selection"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Data cleaning",
+      "explanation": "Data cleaning is a preprocessing activity. Tree construction selects splitting features, grows the tree, and may prune it to control complexity.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        19
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q041",
+      "number": 41,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Neural network training",
+      "prompt": "What is the purpose of backpropagation?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "To pass input data forward through the network without changing any parameters"
+        },
+        {
+          "id": "b",
+          "text": "To compute how each parameter contributed to the error so an optimizer can update the parameters"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "To compute how each parameter contributed to the error so an optimizer can update the parameters",
+      "explanation": "Backpropagation applies the chain rule to calculate loss gradients with respect to network parameters. An optimizer uses these gradients to update the parameters.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        20
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q042",
+      "number": 42,
+      "moduleId": "all",
+      "type": "multi_select",
+      "topic": "Data cleaning",
+      "prompt": "What are the common types of dirty data?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Missing value"
+        },
+        {
+          "id": "b",
+          "text": "Logically wrong value"
+        },
+        {
+          "id": "c",
+          "text": "Malformed value"
+        },
+        {
+          "id": "d",
+          "text": "Duplicate value"
+        }
+      ],
+      "correctChoiceIds": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "selectionCount": 4,
+      "answerText": "Missing value; Logically wrong value; Malformed value; Duplicate value",
+      "explanation": "Missing values, values that violate logical constraints, malformed formats, and duplicates are all common data-quality problems.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        20
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q043",
+      "number": 43,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "AI history",
+      "prompt": "It was the year which the word \"Artificial Intelligence\" was first adopted at the Dartmouth Conference.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "1966"
+        },
+        {
+          "id": "b",
+          "text": "1950"
+        },
+        {
+          "id": "c",
+          "text": "1955"
+        },
+        {
+          "id": "d",
+          "text": "1956"
+        }
+      ],
+      "correctChoiceIds": [
+        "d"
+      ],
+      "selectionCount": 1,
+      "answerText": "1956",
+      "explanation": "The Dartmouth summer workshop took place in 1956. The phrase also appeared in the 1955 proposal, but the question specifically refers to the conference.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        20,
+        21
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review",
+      "notes": "The source displays checkboxes, but asks for a single year. The reviewer treats it as a single-answer question.",
+      "verificationUrls": [
+        "https://ai.dartmouth.edu/our-story",
+        "https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q044",
+      "number": 44,
+      "moduleId": "all",
+      "type": "true_false",
+      "topic": "Classification loss",
+      "prompt": "The loss function of logistic regression is the cross-entropy loss function.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "text": "False"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "True",
+      "explanation": "Standard logistic regression minimizes log loss, also called cross-entropy or negative log-likelihood, possibly with an added regularization penalty.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        21
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review",
+      "verificationUrls": [
+        "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q045",
+      "number": 45,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Feature preprocessing",
+      "prompt": "What is the purpose of Data Normalization?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "To reduce the number of features."
+        },
+        {
+          "id": "b",
+          "text": "To rescale numerical values to a specific range."
+        },
+        {
+          "id": "c",
+          "text": "To identify outliers in the data."
+        },
+        {
+          "id": "d",
+          "text": "To remove missing values."
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "To rescale numerical values to a specific range.",
+      "explanation": "In this preprocessing context, normalization rescales numerical features to a chosen range or scale. It is different from reducing the number of features or removing missing values.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        21,
+        22
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q046",
+      "number": 46,
+      "moduleId": "all",
+      "type": "true_false",
+      "topic": "Naive Bayes",
+      "prompt": "The Naive Bayes algorithm does not require independent and identical distribution among sample features.",
+      "choices": [
+        {
+          "id": "a",
+          "text": "True"
+        },
+        {
+          "id": "b",
+          "text": "False"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "True",
+      "explanation": "Naive Bayes assumes features are conditionally independent given the class; it does not require different features to have identical distributions. Therefore the claim about not requiring the combined IID condition is literally true.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        22
+      ],
+      "answerConfidence": "medium",
+      "answerBasis": "independent_review",
+      "notes": "The stem conflates conditional independence with independent-and-identically-distributed features. If it intends to deny conditional independence, the intended answer would be False. This key follows the literal wording, not an official answer.",
+      "verificationUrls": [
+        "https://scikit-learn.org/stable/modules/naive_bayes.html"
+      ]
+    },
+    {
+      "id": "ai-ot-q047",
+      "number": 47,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Hyperparameter tuning",
+      "prompt": "Which of the following does not belong to the automatic hyperparameter optimization algorithm?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Model-based hyperparameter optimization"
+        },
+        {
+          "id": "b",
+          "text": "Random search"
+        },
+        {
+          "id": "c",
+          "text": "Grid search"
+        },
+        {
+          "id": "d",
+          "text": "Random gradient descent"
+        }
+      ],
+      "correctChoiceIds": [
+        "d"
+      ],
+      "selectionCount": 1,
+      "answerText": "Random gradient descent",
+      "explanation": "Grid search, random search, and model-based optimization search over hyperparameters. 'Random gradient descent' here refers to stochastic gradient descent, which ordinarily updates model parameters during training.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        22,
+        23
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review",
+      "notes": "The source phrase 'Random gradient descent' is preserved. Gradient-based hyperparameter optimization does exist, but the ordinary parameter-training algorithm is the intended contrast.",
+      "verificationUrls": [
+        "https://scikit-learn.org/1.4/modules/grid_search.html",
+        "https://arxiv.org/abs/1502.03492"
+      ]
+    },
+    {
+      "id": "ai-ot-q048",
+      "number": 48,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Neural network architecture",
+      "prompt": "Why do hidden layers in a neural network need nonlinear activation functions?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "They allow the network to learn complex nonlinear relationships rather than behaving like a single linear transformation"
+        },
+        {
+          "id": "b",
+          "text": "They guarantee that the training loss reaches zero after one epoch"
+        }
+      ],
+      "correctChoiceIds": [
+        "a"
+      ],
+      "selectionCount": 1,
+      "answerText": "They allow the network to learn complex nonlinear relationships rather than behaving like a single linear transformation",
+      "explanation": "Composing only linear or affine layers still produces a linear or affine mapping. Nonlinear activations let a network represent more complex nonlinear functions.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        23
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q049",
+      "number": 49,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Transformers and language models",
+      "prompt": "A language model needs to distinguish \"The dog chased the cat\" from \"The cat chased the dog.\" It needs:",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Pooling"
+        },
+        {
+          "id": "b",
+          "text": "Positional encoding"
+        }
+      ],
+      "correctChoiceIds": [
+        "b"
+      ],
+      "selectionCount": 1,
+      "answerText": "Positional encoding",
+      "explanation": "Positional information lets a transformer distinguish token order, including which noun is the subject or object. Pooling alone does not encode that order.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        23,
+        24
+      ],
+      "answerConfidence": "high",
+      "answerBasis": "independent_review"
+    },
+    {
+      "id": "ai-ot-q050",
+      "number": 50,
+      "moduleId": "all",
+      "type": "mcq",
+      "topic": "Dimensionality",
+      "prompt": "What is the \"Curse of Dimensionality\"?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The phenomenon where models perform better with an infinite number of features."
+        },
+        {
+          "id": "b",
+          "text": "The requirement for fewer samples as the number of features increases."
+        }
+      ],
+      "correctChoiceIds": [],
+      "selectionCount": 0,
+      "answerText": "The increasing sparsity and data/computational demands that arise as the number of dimensions grows.",
+      "explanation": "As the number of features grows, data can become sparse and many methods require much more data or computation to learn reliably. Neither visible option states this correctly. The PDF cuts off during option B and omits the remaining choices, so the original correct choice cannot be recovered.",
+      "sourceIds": [
+        "AI_FINALS_PDF"
+      ],
+      "sourcePages": [
+        24
+      ],
+      "answerConfidence": "low",
+      "answerBasis": "independent_review",
+      "notes": "The source ends during option B and omits the remaining choices. This item is preserved for review and has no assigned choice.",
+      "sourceIncomplete": true,
+      "verificationUrls": [
+        "https://scikit-learn.org/0.21/tutorial/statistical_inference/supervised_learning.html#the-curse-of-dimensionality"
+      ],
+      "reviewOnly": true
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A study space for your reviewers. Choose a question bank, practice with immediate feedback, and keep your progress on this device.">
+  <meta name="theme-color" content="#234f42">
+  <title>Reviewers · Kernel</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ai-styles.css">
+  <link rel="stylesheet" href="hub-styles.css">
+  <script src="quiz-engine.js" defer></script>
+  <script src="reviewer-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="bg-paper text-ink antialiased">
+  <div id="loading-state" class="load-state" role="status"><span class="brand-symbol" aria-hidden="true">k<span>_</span></span><p>Opening your study space…</p></div>
+  <section id="error-state" class="load-state hidden" aria-labelledby="error-title"><span class="brand-symbol" aria-hidden="true">k<span>_</span></span><h1 id="error-title">Couldn’t open this reviewer.</h1><p id="error-message"></p><a class="action-button primary" href="./">View all reviewers</a></section>
+  <div id="catalogue-view" class="catalogue-shell hidden">
+    <header class="catalogue-header"><a class="brand flex items-center gap-3" href="./"><span class="brand-symbol" aria-hidden="true">k<span>_</span></span><span>kernel<span class="brand-dot">.</span></span></a><span class="catalogue-header-note"><span class="status-dot"></span>Your personal study space</span></header>
+    <main class="catalogue-main">
+      <section class="catalogue-intro" aria-labelledby="catalogue-title"><div class="eyebrow flex items-center gap-2"><span class="status-dot"></span> A LITTLE PRACTICE, EVERY DAY</div><h1 id="catalogue-title">A place for<br><span>what’s next.</span></h1><p>Choose a reviewer. Work through the questions.<br>Pick up where you left off, whenever you’re ready.</p><div class="catalogue-summary"><span id="catalogue-bank-count">— reviewers</span><span class="meta-divider"></span><span id="catalogue-question-count">— questions to explore</span></div><span class="catalogue-art" aria-hidden="true"><span>learn</span><span>understand<span class="art-dot">.</span></span><span>repeat ↗</span></span></section>
+      <section class="catalogue-library" aria-label="Available reviewers"><div class="catalogue-toolbar"><div><div class="eyebrow text-muted">YOUR LIBRARY</div><h2>Choose your next session.</h2></div><label class="catalogue-search"><span data-icon="book"></span><span class="sr-only">Search reviewers</span><input id="catalogue-search" type="search" placeholder="Find a reviewer…" autocomplete="off"></label></div><div id="catalogue-list" class="catalogue-grid"></div><p id="catalogue-empty" class="catalogue-empty hidden" role="status">No reviewers match your search. Try another title or topic.</p></section>
+      <footer class="catalogue-footer"><span>Small steps. Stronger understanding.</span><span>Progress stays on this device · Every bank is available as JSON</span></footer>
+    </main>
+  </div>
+  <div id="quiz-view" class="hidden">
+  <a href="#questions" class="skip-link">Skip to questions</a>
+  <aside class="sidebar" aria-label="Study navigation">
+    <a class="brand flex items-center gap-3" href="./"><span class="brand-symbol" aria-hidden="true">k<span>_</span></span><span>kernel<span class="brand-dot">.</span></span></a>
+    <a class="back-to-library" href="./">← All reviewers</a>
+    <div class="sidebar-label">YOUR STUDY SPACE</div>
+    <button id="all-modules" class="nav-overview" type="button"><span class="flex items-center gap-3"><span data-icon="grid"></span>All questions</span><span id="bank-count" class="count-pill">0</span></button>
+    <div class="sidebar-label mt-8">COURSE COVERAGE <span id="module-count">0 MODULES</span></div>
+    <nav id="module-nav" aria-label="Modules"></nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span>Progress saved on this device<p>Small steps. Stronger understanding.</p></div>
+  </aside>
+  <div class="page-shell">
+    <header class="topbar flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-sm"><a class="text-muted" href="./">All reviewers</a><span class="text-stone-300">/</span><span id="breadcrumb-title" class="font-semibold">Reviewer</span></div>
+      <a id="download-json" class="download-link flex items-center gap-2" href="quizzes.json" download><span data-icon="download"></span><span>Download JSON</span></a>
+    </header>
+    <main class="main-content">
+      <section class="intro-grid" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <div class="eyebrow flex items-center gap-2"><span class="status-dot"></span> YOUR NEXT STUDY SESSION</div>
+          <h1 id="page-title">Your reviewer.</h1>
+          <p id="intro-description" class="intro-description"></p>
+          <div class="intro-meta flex items-center gap-3"><span data-icon="book"></span><span id="intro-count">0 questions</span><span id="intro-mocks-divider" class="meta-divider"></span><span id="intro-mocks"></span></div>
+        </div>
+        <div class="progress-card">
+          <div class="flex items-center justify-between"><span class="progress-eyebrow">YOUR PROGRESS</span><span data-icon="sparkles"></span></div>
+          <div class="flex items-baseline gap-2 mt-5"><span id="progress-percent" class="progress-number">0</span><span class="progress-percent">%</span><span class="progress-complete">complete</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Questions answered" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"><div id="progress-fill"></div></div>
+          <p id="progress-caption">A fresh start. Let’s get into it.</p>
+          <div class="progress-footer"><span id="progress-fraction">0 of 0 answered</span><span id="progress-accuracy">— accuracy</span></div>
+        </div>
+      </section>
+      <aside id="provenance-notice" class="practice-notice hidden" aria-label="About these questions"></aside>
+      <aside id="unscored-notice" class="practice-notice hidden" aria-label="Unscored items"></aside>
+      <section class="stats-grid" aria-label="Practice statistics">
+        <div class="stat"><span class="stat-icon neutral" data-icon="layers"></span><div><span class="stat-label">Total questions</span><strong id="stat-total">0</strong></div></div>
+        <div class="stat"><span class="stat-icon blue" data-icon="pen"></span><div><span class="stat-label">Answered</span><strong id="stat-answered">0</strong></div></div>
+        <div class="stat"><span class="stat-icon green" data-icon="check"></span><div><span class="stat-label">Correct</span><strong id="stat-correct">0</strong></div></div>
+        <div class="stat"><span class="stat-icon amber" data-icon="retry"></span><div><span class="stat-label">Needs review</span><strong id="stat-incorrect">0</strong></div></div>
+      </section>
+      <section class="practice-section" aria-labelledby="practice-title">
+        <div class="practice-heading flex flex-wrap items-end justify-between gap-4"><div><div class="eyebrow text-muted">A LITTLE PRACTICE, EVERY DAY</div><h2 id="practice-title">Let’s work through it.</h2></div><button id="reset-button" class="text-button flex items-center gap-2" type="button"><span data-icon="reset"></span>Reset progress</button></div>
+        <div class="tools-panel flex flex-wrap items-center gap-2">
+          <button id="show-answers" class="action-button primary flex items-center gap-2" type="button" aria-pressed="false"><span data-icon="eye"></span><span>Show all answers</span></button>
+          <button id="shuffle-button" class="action-button flex items-center gap-2" type="button"><span data-icon="shuffle"></span>Shuffle questions</button>
+          <button id="retry-button" class="action-button flex items-center gap-2" type="button" disabled><span data-icon="retry"></span><span id="retry-label">Retry incorrect (0)</span></button>
+          <span class="tools-note"><span data-icon="bolt"></span>Study mode · immediate feedback</span>
+        </div>
+        <div id="retry-banner" class="retry-banner hidden"><div><strong>Focused practice</strong><span id="retry-caption"></span></div><button id="exit-retry" type="button">Back to all questions <span aria-hidden="true">↗</span></button></div>
+        <div id="reveal-banner" class="reveal-banner hidden"><span data-icon="eye"></span><span>Answer view is on. All answers and explanations are visible. Hide answers to resume practice.</span></div>
+        <div class="list-toolbar flex flex-wrap items-center justify-between gap-3">
+          <div class="filter-group"><span id="mock-filter"><label for="mock-select" class="sr-only">Choose a practice set</label><select id="mock-select" class="module-select"><option value="all">All practice sets</option></select></span><label for="module-select" class="sr-only">Choose a module</label><select id="module-select" class="module-select"><option value="all">All modules</option></select><span id="list-count" class="text-sm text-muted">0 questions</span></div>
+          <span id="list-hint" class="list-hint">Choose an answer, or type in the blank.</span>
+        </div>
+        <div id="questions" class="question-list" tabindex="-1"></div>
+        <div id="empty-state" class="empty-state hidden"><span data-icon="check"></span><h3>No questions in this view.</h3><p>Choose another module or practice set to continue.</p><button id="empty-back" type="button" class="action-button primary">View all questions</button></div>
+      </section>
+      <footer class="page-footer"><span>Made for understanding, one concept at a time.</span><a href="./">← Browse all reviewers</a></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="reset-dialog"><form method="dialog"><div class="dialog-icon" data-icon="reset"></div><h2>Start fresh?</h2><p id="reset-description">This clears answers for this reviewer and restores its original question order.</p><div class="flex justify-end gap-3 mt-6"><button value="cancel" class="action-button" type="submit">Keep studying</button><button id="confirm-reset" value="reset" class="action-button primary" type="submit">Reset progress</button></div></form></dialog>
+  </div>
+  <noscript><style>#loading-state{display:none}</style><p class="noscript">Enable JavaScript to browse and practice. You can still <a href="quizzes.json">open the list of question banks as JSON</a>.</p></noscript>
+</body>
+</html>

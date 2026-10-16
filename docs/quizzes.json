@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "quizzes": [
+    {
+      "slug": "ai-ot",
+      "title": "AI - OT",
+      "description": "50 items transcribed from a supplied past-assessment PDF, with independently reviewed answers and explanations. Includes 48 scored questions and 2 unscored source-review items.",
+      "questionCount": 50,
+      "moduleCount": 1,
+      "mockCount": 0,
+      "reviewOnlyCount": 2,
+      "jsonPath": "quizzes/ai-ot.json",
+      "badge": "Past paper"
+    },
+    {
+      "slug": "applied-ai-finals",
+      "title": "Applied AI Finals Practice",
+      "description": "200 original practice questions in four 50-question sets matching the final-exam format.",
+      "questionCount": 200,
+      "moduleCount": 3,
+      "mockCount": 4,
+      "reviewOnlyCount": 0,
+      "jsonPath": "quizzes/applied-ai-finals.json",
+      "badge": "Applied AI"
+    },
+    {
+      "slug": "operating-systems",
+      "title": "OS Finals Reviewer",
+      "description": "212 Operating Systems practice questions across 11 modules, with explanations and focused retry.",
+      "questionCount": 212,
+      "moduleCount": 11,
+      "mockCount": 0,
+      "reviewOnlyCount": 0,
+      "jsonPath": "quizzes/operating-systems.json",
+      "badge": "Operating Systems"
+    }
+  ]
+}
