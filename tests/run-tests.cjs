@@ -353,6 +353,8 @@ await check('incomplete source items remain visible and unscored without changin
   assert.equal(view.state().answers['aai-q002'],undefined);
   const card=hub.catalogueCard({slug:'fixture',title:'Mixed',questionCount:5,jsonPath:'quizzes/fixture.json'},hub.savedProgress(storage,{slug:'fixture'}));
   assert.match(card,/4 of 4 scored items answered/);assert.match(card,/100%/);
+  const completedSourceCard=hub.catalogueCard({slug:'fixture',title:'Mixed',questionCount:5,reviewOnlyCount:0,jsonPath:'quizzes/fixture.json'},hub.savedProgress(storage,{slug:'fixture'}));
+  assert.match(completedSourceCard,/4 of 5 answered/);assert.match(completedSourceCard,/80%/);
 });
 const registryPath=path.join(root,'quizzes.json');
 if(fs.existsSync(registryPath)){

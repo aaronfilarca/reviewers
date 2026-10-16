@@ -11,7 +11,7 @@ Selecting a catalogue entry opens `?q=<slug>`. Every quiz uses the shared engine
 
 ## Question sources
 
-The Operating Systems bank and the 200-question Applied AI practice bank are migrated from the existing reviewer. **AI - OT** transcribes the 50 numbered items from the supplied past-assessment PDF. Its answer key is independently reviewed because the PDF shows a student's selected responses, not an official key. Ambiguous wording is discussed in explanations. Incomplete or genuinely ungradable source items are clearly marked as unscored review items; their visible content is preserved.
+The Operating Systems bank and the 200-question Applied AI practice bank are migrated from the existing reviewer. **AI - OT** is based on the 50 numbered items from the supplied past-assessment PDF. Its answer key is independently reviewed because the PDF shows a student's selected responses, not an official key. Ambiguous wording is discussed in explanations. Question 36 remains unscored because it has multiple defensible answers. Question 50 is completed for practice with clearly labeled added choices C and D; these do not reconstruct the original missing choices or official key. The bank has 49 scored questions and one unscored review item.
 
 The original PDF, personal assessment details, receipt, grade, and page images are not included in this repository. Source-page numbers and verification references are included in the question metadata where relevant.
 

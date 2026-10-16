@@ -2,22 +2,21 @@
   "title": "AI - OT",
   "slug": "ai-ot",
   "schemaVersion": 2,
-  "description": "50 items transcribed from a supplied past-assessment PDF, with independently reviewed answers and explanations. Includes 48 scored questions and 2 unscored source-review items.",
+  "description": "50 items based on a supplied past-assessment PDF, with independently reviewed answers and explanations. Includes 49 scored questions, one unscored review item, and clearly labeled practice choices completing question 50.",
   "catalogueBadge": "Past paper",
   "language": "en",
   "createdOn": "2026-10-16",
   "timezone": "Asia/Manila",
   "source": "AI_FINALS.pdf (user-supplied scanned past-assessment feedback)",
   "provenance": {
-    "statement": "Transcribed from a supplied past assessment. The answer key is independently reviewed, not an official key. Ambiguous wording is explained. Questions 36 and 50 are unscored review items because no unique supported choice can be recovered.",
-    "transcription": "Original question numbers, visible stems and choices preserved; whitespace normalized. Where the source uses checkbox-style choices, the number of defensible answers determines the reviewer interaction.",
+    "statement": "Based on a supplied past assessment. The answer key is independently reviewed, not an official key. Question 36 remains unscored because its wording supports multiple answers. Question 50 is completed for practice with clearly labeled added choices C and D; these are not recovered original choices.",
+    "transcription": "Original question numbers and visible source content preserved; whitespace normalized. Question 50 includes two clearly labeled added practice choices. Where the source uses checkbox-style choices, the number of defensible answers determines the reviewer interaction.",
     "answerKeyStatus": "independently_reviewed_not_official",
     "sourcePageCount": 24,
     "originalItemCount": 50,
-    "scoredQuestionCount": 48,
+    "scoredQuestionCount": 49,
     "reviewOnlyQuestionNumbers": [
-      36,
-      50
+      36
     ],
     "mediumConfidenceQuestionNumbers": [
       4,
@@ -31,7 +30,7 @@
     "sourceLimitations": [
       "The source shows selected responses rather than an official answer key; selections were not assumed correct.",
       "Question 36 has multiple defensible remedies in a single-choice stem, so no unique answer is graded.",
-      "Question 50 is clipped after A and part of B; omitted choices are not invented.",
+      "Question 50 is clipped after A and part of B. Choices C and D are authored and labeled as added practice choices; its original answer key remains unavailable.",
       "Some true/false and qualitative statements have imprecise wording; explanations identify the interpretation used."
     ],
     "privacy": "Only educational question content and explanations are published. The original PDF, submission receipt, grades, student details, source assessment URLs and page images are excluded."
@@ -1931,7 +1930,7 @@
       "moduleId": "all",
       "type": "mcq",
       "topic": "Dimensionality",
-      "prompt": "What is the \"Curse of Dimensionality\"?",
+      "prompt": "What is the \"Curse of Dimensionality\"? (Completed for practice)",
       "choices": [
         {
           "id": "a",
@@ -1940,26 +1939,42 @@
         {
           "id": "b",
           "text": "The requirement for fewer samples as the number of features increases."
+        },
+        {
+          "id": "c",
+          "text": "As dimensions increase, data becomes sparser and many learning methods need substantially more samples to maintain reliable performance. (Added practice choice)"
+        },
+        {
+          "id": "d",
+          "text": "The guarantee that adding more features always improves generalization without increasing data needs. (Added practice choice)"
         }
       ],
-      "correctChoiceIds": [],
-      "selectionCount": 0,
+      "correctChoiceIds": [
+        "c"
+      ],
+      "selectionCount": 1,
       "answerText": "The increasing sparsity and data/computational demands that arise as the number of dimensions grows.",
-      "explanation": "As the number of features grows, data can become sparse and many methods require much more data or computation to learn reliably. Neither visible option states this correctly. The PDF cuts off during option B and omits the remaining choices, so the original correct choice cannot be recovered.",
+      "explanation": "C is the correct answer for this practice completion. As the number of features grows, data can become sparse and many methods require much more data or computation to learn reliably. Adding dimensions does not guarantee better generalization. Choices C and D were authored for practice because the source cuts off during option B; they do not reconstruct the original missing choices or official answer key.",
       "sourceIds": [
         "AI_FINALS_PDF"
       ],
       "sourcePages": [
         24
       ],
-      "answerConfidence": "low",
-      "answerBasis": "independent_review",
-      "notes": "The source ends during option B and omits the remaining choices. This item is preserved for review and has no assigned choice.",
+      "answerConfidence": "high",
+      "answerBasis": "independent_review_with_added_practice_choices",
+      "notes": "Completed for practice: the source ends during option B. Choices C and D are added practice choices, not recovered original choices. This version is scored using an independently reviewed practice key.",
       "sourceIncomplete": true,
+      "practiceCompletion": {
+        "addedChoiceIds": [
+          "c",
+          "d"
+        ],
+        "originalKeyRecovered": false
+      },
       "verificationUrls": [
         "https://scikit-learn.org/0.21/tutorial/statistical_inference/supervised_learning.html#the-curse-of-dimensionality"
-      ],
-      "reviewOnly": true
+      ]
     }
   ]
 }

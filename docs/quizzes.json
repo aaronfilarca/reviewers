@@ -4,11 +4,11 @@
     {
       "slug": "ai-ot",
       "title": "AI - OT",
-      "description": "50 items transcribed from a supplied past-assessment PDF, with independently reviewed answers and explanations. Includes 48 scored questions and 2 unscored source-review items.",
+      "description": "50 items based on a supplied past-assessment PDF, with independently reviewed answers and explanations. Includes 49 scored questions, one unscored review item, and clearly labeled practice choices completing question 50.",
       "questionCount": 50,
       "moduleCount": 1,
       "mockCount": 0,
-      "reviewOnlyCount": 2,
+      "reviewOnlyCount": 1,
       "jsonPath": "quizzes/ai-ot.json",
       "badge": "Past paper"
     },

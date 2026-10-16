@@ -42,7 +42,8 @@
     const count = `${quiz.questionCount} questions`;
     const modules = Number.isInteger(quiz.moduleCount) && quiz.moduleCount > 0 ? ` · ${quiz.moduleCount} module${quiz.moduleCount === 1 ? '' : 's'}` : '';
     const sets = Number.isInteger(quiz.mockCount) && quiz.mockCount > 0 ? ` · ${quiz.mockCount} practice sets` : '';
-    const scorableTotal = progress && Number.isInteger(progress.scorableTotal) && progress.scorableTotal >= 0 && progress.scorableTotal <= quiz.questionCount ? progress.scorableTotal : quiz.questionCount;
+    const registeredTotal = Number.isInteger(quiz.reviewOnlyCount) && quiz.reviewOnlyCount >= 0 && quiz.reviewOnlyCount <= quiz.questionCount ? quiz.questionCount - quiz.reviewOnlyCount : null;
+    const scorableTotal = registeredTotal ?? (progress && Number.isInteger(progress.scorableTotal) && progress.scorableTotal >= 0 && progress.scorableTotal <= quiz.questionCount ? progress.scorableTotal : quiz.questionCount);
     const answered = progress ? Math.min(progress.answered, scorableTotal) : 0;
     const progressText = answered ? `${answered} of ${scorableTotal} ${scorableTotal < quiz.questionCount ? 'scored items answered' : 'answered'}` : 'Ready when you are';
     const percent = scorableTotal ? Math.round(answered / scorableTotal * 100) : 0;
